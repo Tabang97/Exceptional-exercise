@@ -11,7 +11,11 @@ def check():
     password = pass1.get()
     if (my_user, password) in all_logs.items():
         messagebox.showinfo("INFO", "CORRECT LOGIN")
-        root.withdraw
+        root.withdraw()
+        import except_errors
+        except_errors.mainloop()
+
+
     else:
         messagebox.showinfo("INFO","INCORRECT LOGIN")
 
@@ -38,28 +42,6 @@ pass1.pack()
 #Button
 log_btn = Button(root, text="Login", height=1, bg="purple", width=10, command=check)
 log_btn.pack()
-
-
-
-# #status feedback
-# def status():
-#     check_btn = messagebox.showinfo("Congratulations", "You qualify to go to Malaysia")
-#     if  check_btn>3000:
-#         Label(root)
-#
-#     if check_btn<3000:
-#         Label(root)
-#         messagebox.showerror("Please deposit more funds for this excursion.")
-#
-#
-# #check qualification btn & entry
-# check_btn = Entry(root, borderwidth=4)
-# check_btn.pack()
-# check_btn = Button(root, text="Check qualification", command=status)
-# check_btn.pack()
-#
-#
-#
 
 
 
